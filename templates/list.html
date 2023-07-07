@@ -1,0 +1,28 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+
+    h5
+    {
+        background-color: red;
+    }
+</style>
+
+<br> <br>
+
+    {% for i in data %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.cimage}}" class="card-img-top" alt="...">
+        <div class="cdard-body">
+          <h5 class="card-title" ><a href="{{i.collegename}}">{{i.collegename}}</a></h5>
+          <p class="card-text">{{i.established}}</p>
+          <a href="" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    {% endfor %}
+  {% endblock %}
